@@ -14,4 +14,7 @@ RUN cd /tmp/ \
 && chmod +x /usr/local/bin/docker \
 && rm -rf /tmp/*
 
-USER jenkins
+# We keep the user as root to use docker
+# See Blue Ocean example
+# https://jenkins.io/doc/book/installing/#on-macos-and-linux
+# USER jenkins
