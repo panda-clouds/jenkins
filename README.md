@@ -1,4 +1,4 @@
-# jenkins
+# Jenkins + Docker Client
 This Dockerfile adds the "docker client" into the jenkins/jenkins image.
 
 This can be used to reach docker from a declarative pipeline
