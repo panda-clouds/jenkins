@@ -1,11 +1,6 @@
-# To specifiy a version use
-# docker build . --build-arg version=lts
-
-ARG version=lts
+FROM jenkins/jenkins:lts
 
 LABEL maintainer="hello@pandaclouds.com"
-
-FROM jenkins/jenkins:$version
 
 ARG DOCKER_CLIENT="docker-18.09.0.tgz"
 
