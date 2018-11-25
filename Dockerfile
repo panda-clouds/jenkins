@@ -4,6 +4,7 @@ LABEL maintainer="hello@pandaclouds.com"
 
 ARG DOCKER_CLIENT="docker-18.09.0.tgz"
 
+USER root
 # From https://forums.docker.com/t/using-docker-in-a-dockerized-jenkins-container/322/10
 RUN cd /tmp/ \
 && curl -sSL -O https://download.docker.com/linux/static/stable/x86_64/${DOCKER_CLIENT} \
@@ -13,3 +14,4 @@ RUN cd /tmp/ \
 && chmod +x /usr/local/bin/docker \
 && rm -rf /tmp/*
 
+USER jenkins
